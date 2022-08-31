@@ -11,7 +11,7 @@ const Header = (props) => {
 const Main = (props) => {
   return (
     <main>
-      <p>{props.adjective} asdmain goes here</p>
+      <p>{props.adjective} main goes here</p>
     </main>
   );
 };
