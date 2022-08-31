@@ -8,13 +8,24 @@ const App = () => {
   const submit = (e) => {
     e.preventDefault();
     alert(`${title}, ${color}`);
+    setTitle("");
+    setColor("");
   };
 
   return (
     <>
       <form onSubmit={submit}>
-        <input type="text" placeholder="color title..." />
-        <input type="color" />
+        <input
+          onChange={(event) => setTitle(event.target.value)}
+          value={title}
+          type="text"
+          placeholder="color title..."
+        />
+        <input
+          onChange={(event) => setColor(event.target.value)}
+          value={color}
+          type="color"
+        />
         <button>Add</button>
       </form>
     </>
