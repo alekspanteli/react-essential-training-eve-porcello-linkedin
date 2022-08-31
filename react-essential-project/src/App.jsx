@@ -1,7 +1,6 @@
 import "./App.css";
 
-const Header = (props) => {
-  console.log(props);
+const Header = () => {
   return (
     <header>
       <p>Header goes here</p>
