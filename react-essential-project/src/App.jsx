@@ -1,26 +1,35 @@
 import "./App.css";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header>
-      <p>Header goes here</p>
+      <p>{props.name}`s header goes here</p>
     </header>
   );
 };
 
-const Main = () => {
+const Main = (props) => {
   return (
     <main>
-      <p>Main goes here</p>
+      <p>{props.adjective} main goes here</p>
     </main>
+  );
+};
+
+const Footer = (props) => {
+  return (
+    <footer>
+      <p>&copy; {props.year} Footer goes here</p>
+    </footer>
   );
 };
 
 const App = () => {
   return (
     <>
-      <Header />
-      <Main />
+      <Header name="Alex" />
+      <Main adjective="Great" />
+      <Footer year={new Date().getFullYear()} />
     </>
   );
 };
