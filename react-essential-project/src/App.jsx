@@ -20,13 +20,14 @@ function App() {
   }, []);
   if (data)
     return (
-      <GithubUser
-        name={data.login}
-        location={data.node_id}
-        avatar={data.avatar_url}
-      />
+      <>
+        <GithubUser
+          name={data.login}
+          location={data.node_id}
+          avatar={data.avatar_url}
+        />
+      </>
     );
-  return <h1>Data</h1>;
 }
 
 export default App;
