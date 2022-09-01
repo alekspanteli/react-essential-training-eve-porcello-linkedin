@@ -1,6 +1,14 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 
+const GitHubUser = ({ name }) => {
+  return (
+    <div>
+      <h1>{name}</h1>
+    </div>
+  );
+};
+
 const App = () => {
   const [data, setData] = useState(null);
 
@@ -9,11 +17,8 @@ const App = () => {
       .then((response) => response.json())
       .then(setData);
   }, []);
-  
-  if(data)
-    return (
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    )
+
+  if (data) return <GitHubUser name={data.name} />;
 
   return (
     <>
